@@ -4,10 +4,10 @@ int pai (int i) {
    return (i - 1)/2; 
 }
 
-int Esquerda (i){
+int esquerda (int i){
     return i * 2 + 1;
 }
-int Direita (i){
+int direita (int i){
     return i * 2 + 2;
 }
 
@@ -26,8 +26,8 @@ void imprimir (int V[], int size) {
 }
 
 void max_heapify (int V[], int size, int i) {
-    int e = Esquerda(i);
-    int d = Direita(i);
+    int e = esquerda(i);
+    int d = direita(i);
     int maior = 0;
     if (e < size && V[e] > V[i])
         maior = e;
@@ -56,8 +56,6 @@ void heap_sort (int V[], int size) {
 }
 
 int main () {
-
-   int i;
 
    int size = 10;
 
